@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Java Form</title>
+<style>article {
+	background: #FFFFFE;
+	margin: 0 0 30px 0;
+	padding: 20px;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	box-shadow: 0 0 10px 000000;
+	-moz-box-shadow: 0 0 10px 000000;
+	-webkit-box-shadow: 0 0 10px 000000;
+}
+body {
+	width: 960px;
+	margin: 0 auto;
+	color: #2B6490;
+	font: 12px/18px copperplate gothic;
+	text-align: justify;
+}
+	form#multiphase { border:#000; padding:24px; width:350px; }
+	form#multiphase > #phase2, #phase3, #show_all_data{ display:none; }
+</style	>
+</head>
+<body>
+<article>
+<form id="multiphase" onsubmit="return false">
+<progress id="progressBar" value="0" max="100" style="width:250px;"></progress>
+<h3 id ="status">Phase 1 of 3</h3>
+  <div id="phase1">
+    First Name: <input id="firstname" name="firstname"><br>
+    Last Name: <input id="lastname" name="lastname"><br>
+    <button onclick="processPhase1()">Continue</button>
+  </div>
+  <div id="phase2">
+    Email: <input id="email" name="email"><br>
+    <button onclick="processPhase2()">Continue</button>
+  </div>
+  <div id="phase3">
+    Comment: <input id="comment"  name="comment" maxlength="1000" cols="25" rows="2"></input>
+    <button onclick="processPhase3()">Continue</button>
+  </div>
+  <div id="show_all_data">
+    First Name: <span id="display_fname"></span> <br>
+    Last Name: <span id="display_lname"></span> <br>
+    Email: <span id="display_email"></span> <br>
+    Comment: <span id="display_comment"></span> <br>
+    <button onclick="submitForm()">Submit Data</button>
+  </div>
+</form>
+</article>
+<script src = "contact.js">
+   </script>
+</body>
+</html>	
